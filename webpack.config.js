@@ -29,6 +29,10 @@ module.exports = {
         use: "file-loader",
       },
       {
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)?$/,
+        use: "file-loader",
+      },
+      {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
