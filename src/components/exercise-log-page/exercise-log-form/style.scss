@@ -1,0 +1,8 @@
+.exercise-type-selection-bar {
+  height: 60px;
+}
+
+.exercise-item-list {
+  height: calc(100% - 60px);
+  overflow: scroll;
+}

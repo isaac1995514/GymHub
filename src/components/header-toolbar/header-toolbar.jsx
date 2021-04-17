@@ -16,8 +16,12 @@ import firebase from "firebase";
 /* Component */
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
+import IconButton from "@material-ui/core/IconButton";
+import ListIcon from "@material-ui/icons/List";
 
 function HeaderToolbar(props) {
+  const { toggleDrawer } = props;
+
   const userInfo = useContext(UserInfoContext);
 
   const [userMenuAnchor, setUserMenuAnchor] = useState(false);
@@ -68,7 +72,26 @@ function HeaderToolbar(props) {
   return (
     <div className={classnames("header-toolbar-wrapper")}>
       <div className={classnames("header-toolbar-content-wrapper")}>
-        {userMenu}
+        <div
+          className={classnames(
+            "header-toolbar-section",
+            "header-toolbar-content-left"
+          )}
+        >
+          <div className={classnames("menu-icon-button-wrapper")}>
+            <IconButton onClick={toggleDrawer(true)}>
+              <ListIcon />
+            </IconButton>
+          </div>
+        </div>
+        <div
+          className={classnames(
+            "header-toolbar-section",
+            "header-toolbar-content-right"
+          )}
+        >
+          {userMenu}
+        </div>
       </div>
     </div>
   );

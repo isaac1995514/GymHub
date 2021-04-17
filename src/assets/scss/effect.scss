@@ -1,12 +1,10 @@
 @mixin icon-button-style {
   display: inline-flex;
   border-radius: 50%;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
 
-  &:hover {
-    cursor: pointer;
-    box-shadow: 0px 0px;
-    box-shadow: 0 0 5px 3px $shadow-gray;
-  }
+  cursor: pointer;
 
   &:active {
     box-shadow: 0 0 #e2e2e2;

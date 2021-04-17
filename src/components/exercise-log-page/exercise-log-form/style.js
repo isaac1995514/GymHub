@@ -1,9 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-  exerciseBar: {
-    height: 80,
-  },
   exerciseItemList: {
     height: "calc(100% - 80px)",
   },

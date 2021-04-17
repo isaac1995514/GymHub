@@ -7,7 +7,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import AuthPage from "./components/auth-page/auth-page";
 
 /* Style */
-import "./App.css";
+import "./App.scss";
 
 /* Database */
 import firebase from "firebase/app";
@@ -35,7 +35,7 @@ function App() {
 
   // Display Login Page when user is not login
   if (!user) {
-    <AuthPage />;
+    return <AuthPage />;
   }
 
   return (

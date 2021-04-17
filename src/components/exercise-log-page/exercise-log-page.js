@@ -14,6 +14,7 @@ import "./exercise-log-page.scss";
 const ExerciseLogPage = (props) => {
   return (
     <div className={classnames("exercise-log-page-wrapper")}>
+      <div className={classnames("previous-exercise-list")}></div>
       <div className={classnames("exercise-log-form")}>
         <ExerciseLogForm />
       </div>
