@@ -8,7 +8,8 @@ export const mockdata = {
           set: 3,
           reps: [8, 8, 9],
           weight: 35,
-          notes: "",
+          notes:
+            "This is a notes. This is a notes. This is a notes. This is a notes.",
         },
       ],
       rest: 45,

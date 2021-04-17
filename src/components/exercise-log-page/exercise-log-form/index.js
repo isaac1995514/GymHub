@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 /* Components */
 import Chip from "@material-ui/core/Chip";
 import Paper from "@material-ui/core/Paper";
-import ExerciseLogCard from "../exercise-log-card";
+import ExerciseLogItemList from "../exercise-log-card";
 
 /* Style */
 import { useStyles } from "./style";
@@ -29,7 +29,7 @@ export default function ExerciseLogForm() {
     Upper: false,
   });
 
-  const exerciseLogList = exerciseLog.exerciseSets;
+  const exerciseLogItems = exerciseLog.exerciseSets;
 
   /* Selecting / Deselecting a chip */
   const handleChipClick = (type) => (e) => {
@@ -64,9 +64,7 @@ export default function ExerciseLogForm() {
         key={"exercise-item-list"}
         className={classnames("exercise-item-list")}
       >
-        {exerciseLogList.map((log, index) => (
-          <ExerciseLogCard key={`exercise-log-${index}`} {...log} />
-        ))}
+        <ExerciseLogItemList exerciseLogItems={exerciseLogItems} />
       </div>
     </>
   );
