@@ -1,0 +1,14 @@
+@import "../../../../assets/scss/color-sheet.scss";
+@import "../../../../assets/scss/effect.scss";
+
+.login-icons-panel-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 5px;
+  width: 36px;
+  border-left: 1px solid $divider-gray;
+
+  .icon-button-wrapper {
+    @include icon-button-style;
+  }
+}

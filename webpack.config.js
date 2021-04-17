@@ -11,9 +11,9 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     port: 3030,
+    inline: true,
+    hot: true,
   },
-  mode: "development",
-  watch: true,
   module: {
     rules: [
       {
@@ -23,10 +23,6 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.(png|j?g|svg|gif)?$/,
-        use: "file-loader",
       },
       {
         test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)?$/,

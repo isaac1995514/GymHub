@@ -1,9 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+
+/* Components */
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+
+/* Utils */
+import reportWebVitals from "./reportWebVitals";
+
+/* Style */
+import "./index.css";
+
+/* Database */
+import firebase from "firebase";
+import firebaseConfig from "./firebaseConfig";
+
+firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>
