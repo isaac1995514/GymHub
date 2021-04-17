@@ -17,9 +17,6 @@ const ExerciseLogPage = (props) => {
       <div className={classnames("exercise-log-form")}>
         <ExerciseLogForm />
       </div>
-      <div className={classnames("previous-exercise-log-list")}>
-        <Paper />
-      </div>
     </div>
   );
 };

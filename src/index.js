@@ -15,14 +15,20 @@ import "./index.css";
 import firebase from "firebase";
 import firebaseConfig from "./firebaseConfig";
 
+/* Redux Store */
+import { Provider } from "react-redux";
+import store from "./store";
+
 firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  </Provider>,
   document.getElementById("root")
 );
 

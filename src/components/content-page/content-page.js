@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 /* Component */
 import ExerciseLogPage from "../exercise-log-page/exercise-log-page";
